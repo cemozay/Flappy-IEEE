@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LowerPipe
+      name: UpperPipe
       rect:
         serializedVersion: 2
         x: 56
@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UpperPipe
+      name: LowerPip
       rect:
         serializedVersion: 2
         x: 84
@@ -341,7 +341,7 @@ TextureImporter:
         width: 17
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,12 +369,12 @@ TextureImporter:
       Floor: -1324113986
       GameOver: -1011887930
       GetReady: -1055249700
-      LowerPipe: 323148698
+      LowerPip: 989111159
       MenuButton: -89775209
       Mobile - Flappy Bird - Version 12 Sprites_0: -1983792512
       OKButton: -652465988
       TapToStart: 585809118
-      UpperPipe: 989111159
+      UpperPipe: 323148698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
