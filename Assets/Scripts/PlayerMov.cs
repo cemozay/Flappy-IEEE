@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 public class PlayerMov : MonoBehaviour
 {
     [SerializeField] private float flySpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private TMP_Text scoreText;
+    private float score;
+    
     private Rigidbody2D rb;
     GameManager gameManager;
 
@@ -20,6 +24,8 @@ public class PlayerMov : MonoBehaviour
         {
             rb.velocity = Vector2.up * flySpeed;
         }
+
+        scoreText.text = score.ToString();
     }
 
     void FixedUpdate()
@@ -30,5 +36,10 @@ public class PlayerMov : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameManager.GameOver();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        score += 1;
     }
 }

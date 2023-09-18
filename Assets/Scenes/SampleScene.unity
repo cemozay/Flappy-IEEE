@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &84936125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,6 +1230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flySpeed: 2
   rotationSpeed: 11
+  scoreText: {fileID: 1396302633}
 --- !u!50 &2036923246
 Rigidbody2D:
   serializedVersion: 4
