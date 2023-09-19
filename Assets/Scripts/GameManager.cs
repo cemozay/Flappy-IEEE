@@ -11,11 +11,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float destroyDelay = 2f;
     [SerializeField] private float heightRange = 1f;
     [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private GameObject GetReadyObj;
     private float timeSinceLastSpawn = 0f;
 
     void Start()
     {
+        Time.timeScale = 0f;
         SpawnPipe();
+    }
+
+    public IEnumerator StartSequence()
+    {
+        GetReadyObj.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
+        GetReadyObj.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     private void Update()
