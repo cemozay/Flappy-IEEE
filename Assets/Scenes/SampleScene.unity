@@ -378,7 +378,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -264795040, guid: 8836e26e82a88aa40b981957dec31b6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 137dbdceb93144643b1ca8ead4a79924, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -397,9 +397,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730979894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalScale: {x: 0.57, y: 0.57, z: 0.57}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1106,15 +1106,15 @@ RectTransform:
   m_GameObject: {fileID: 1638038717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8999999, y: 0.8999999, z: 0.8999999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 84936128}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 276.702}
+  m_AnchoredPosition: {x: 0, y: 307}
   m_SizeDelta: {x: 563.116, y: 562.897}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1638038719
@@ -1447,7 +1447,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 985009212, guid: 8836e26e82a88aa40b981957dec31b6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a11603427ac7b54ba1bb4e70e88dae8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1466,9 +1466,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036923242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.05, y: -0.019, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.595383, z: 1.5947932}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1485,7 +1485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48edfd32a23ee3e4a98021030a3dd431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 2
+  flySpeed: 1.95
   rotationSpeed: 11
   scoreText: {fileID: 1396302633}
 --- !u!50 &2036923246
@@ -1499,7 +1499,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 0.014806745
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -1551,7 +1551,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.17, y: 0.12}
+    oldSize: {x: 0.4, y: 0.32}
     newSize: {x: 0.17, y: 0.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1559,12 +1559,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.00010012835, y: 0.06190574}
-      - {x: -0.06060648, y: 0.03903682}
-      - {x: -0.0872869, y: -0.011315543}
-      - {x: -0.062131077, y: -0.044372905}
-      - {x: -0.00066217035, y: -0.062286887}
-      - {x: 0.046122827, y: -0.055807363}
-      - {x: 0.08690574, y: -0.015508179}
-      - {x: 0.06136878, y: 0.034081884}
+    - - {x: 0.114235476, y: 0.15425359}
+      - {x: 0.03285396, y: 0.16727379}
+      - {x: -0.028991971, y: 0.15552337}
+      - {x: -0.067372516, y: 0.13274089}
+      - {x: -0.10412093, y: 0.07062325}
+      - {x: -0.12465002, y: 0.0223934}
+      - {x: -0.17852898, y: 0.009821869}
+      - {x: -0.19323328, y: -0.023628086}
+      - {x: -0.15481311, y: -0.058172755}
+      - {x: -0.099246904, y: -0.079988256}
+      - {x: -0.071612194, y: -0.12562625}
+      - {x: -0.007442463, y: -0.16502778}
+      - {x: 0.06981656, y: -0.16763619}
+      - {x: 0.12857299, y: -0.14363398}
+      - {x: 0.1851132, y: -0.084535845}
+      - {x: 0.20348205, y: 0.0035757013}
+      - {x: 0.1769932, y: 0.08908051}
   m_UseDelaunayMesh: 0
