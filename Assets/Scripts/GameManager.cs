@@ -50,16 +50,30 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        PlayerMov.OutputScore = LivesSystem.instance.highscore_;
+        //PlayerMov.OutputScore = LivesSystem.instance.highscore_;
         gameOverCanvas.SetActive(true);
+
+        if (LivesSystem.instance.can == 1)
+        {
+            LivesSystem.instance.nameCanvas.SetActive(true);
+        }
+
         Time.timeScale = 0;
     }
 
     public void Restart()
     {
+
         gameOverCanvas.SetActive(false);
         Time.timeScale = 1;
+
+        if (LivesSystem.instance.can ==1)
+        {
+            LivesSystem.instance.DestroyGameobject();
+            LivesSystem.instance.LSHighScoreDetector();
+
+        }
+
         SceneManager.LoadScene("SampleScene");
-        LivesSystem.instance.score = 0;
     }
 }

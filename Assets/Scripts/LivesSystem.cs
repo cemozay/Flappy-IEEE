@@ -9,9 +9,10 @@ public class LivesSystem : MonoBehaviour
     public static LivesSystem instance;
     public List<GameObject> hearts = new List<GameObject>();
     public int can;
-    public int score, highscore_;
+    public int score;
     public GameObject nameCanvas;
     public TMP_InputField nameInput;
+    public TMP_Text scoreText;
     private void Awake()
     {
         if (instance == null)
@@ -29,11 +30,13 @@ public class LivesSystem : MonoBehaviour
     // GameManager'ý yok etmek için özel bir fonksiyon
     public void DestroyGameManager()
     {
+        if (can == 1)
+        {
+        }
+
         if(can == 0)
         {
             Destroy(gameObject);
-            nameCanvas.SetActive(true);
-            Highscore.instance.ChechkLeaderboard(highscore_, nameInput.text);
         }
     }
 
@@ -42,15 +45,6 @@ public class LivesSystem : MonoBehaviour
         can--;
         // Can sayýsýný azalttýktan sonra canlarý görsel olarak güncelle
     }
-
-    public void HighScoreDetector()
-    {
-        if (score > highscore_)
-        {
-            highscore_ = score;
-        }
-    }
-
     public void DestroyHeart()
     {
         GameObject heartToRemove = hearts[0];
@@ -58,4 +52,13 @@ public class LivesSystem : MonoBehaviour
         hearts.RemoveAt(0);
     }
 
+    public void DestroyGameobject()
+    {
+        Destroy(gameObject);
+    }
+
+    public void LSHighScoreDetector()
+    {
+        Highscore.instance.ChechkLeaderboard(score, nameInput.text);
+    }
 }

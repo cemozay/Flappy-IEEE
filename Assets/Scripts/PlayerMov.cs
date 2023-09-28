@@ -47,7 +47,6 @@ public class PlayerMov : MonoBehaviour
         LivesSystem.instance.DestroyHeart();
 
         LivesSystem.instance.can -= 1;
-        LivesSystem.instance.HighScoreDetector();
 
         gameManager.GameOver();
 
@@ -57,5 +56,7 @@ public class PlayerMov : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         LivesSystem.instance.score += 1;
+        LivesSystem.instance.scoreText.text = LivesSystem.instance.score.ToString();
+
     }
 }
