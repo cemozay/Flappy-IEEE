@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        PlayerMov.OutputScore = LivesSystem.instance.highscore_;
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0;
     }
@@ -60,6 +59,5 @@ public class GameManager : MonoBehaviour
         gameOverCanvas.SetActive(false);
         Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene");
-        LivesSystem.instance.score = 0;
     }
 }

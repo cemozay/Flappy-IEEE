@@ -15,6 +15,5 @@ public class ButtonManager : MonoBehaviour
     {
         gameManager.StartCoroutine(gameManager.StartSequence());
         StartButtonObj.SetActive(false);
-        LivesSystem.instance.nameCanvas.SetActive(false);
     }
 }
