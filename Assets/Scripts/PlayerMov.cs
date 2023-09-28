@@ -7,10 +7,12 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] private float flySpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private TMP_Text scoreText;
-    private float score;
-    
+    public static int OutputScore;
+    [SerializeField] private string name;
+
     private Rigidbody2D rb;
     GameManager gameManager;
+    [SerializeField] bool isAdmin;
 
     void Start() 
     {
@@ -25,7 +27,8 @@ public class PlayerMov : MonoBehaviour
             rb.velocity = Vector2.up * flySpeed;
         }
 
-        scoreText.text = score.ToString();
+        scoreText.text = LivesSystem.instance.score.ToString();
+        name = LivesSystem.instance.nameInput.text;
     }
 
     void FixedUpdate()
@@ -35,11 +38,24 @@ public class PlayerMov : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isAdmin)
+        {
+            OutputScore++;
+            return;
+        }
+
+        LivesSystem.instance.DestroyHeart();
+
+        LivesSystem.instance.can -= 1;
+        LivesSystem.instance.HighScoreDetector();
+
         gameManager.GameOver();
+
+        LivesSystem.instance.DestroyGameManager();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        score += 1;
+        LivesSystem.instance.score += 1;
     }
 }
