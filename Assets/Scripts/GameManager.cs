@@ -14,6 +14,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject GetReadyObj;
     private float timeSinceLastSpawn = 0f;
 
+    private void Awake()
+    {
+        //Set screen size for Standalone
+#if UNITY_STANDALONE
+        Screen.SetResolution(603, 1072, true);
+        //Screen.fullScreen = true;
+#endif
+    }
+
     void Start()
     {
         Time.timeScale = 0f;

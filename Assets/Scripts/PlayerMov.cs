@@ -8,7 +8,7 @@ public class PlayerMov : MonoBehaviour
     [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private TMP_Text scoreText;
     public static int OutputScore;
-    [SerializeField] private string name;
+    //[SerializeField] private string name;
 
     private Rigidbody2D rb;
     GameManager gameManager;
